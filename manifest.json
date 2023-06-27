@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Phawula",
+  "version": "1.0.0",
+  "description": "Enable the \"Comment\" tab in Teamleader by default.",
+  "author": "Daan Vos de Wael",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://portal.bitfactory.nl/ticket/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://portal.bitfactory.nl/ticket/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "permissions": [
+    "scripting",
+    "tabs",
+    "activeTab"
+  ]
+}
