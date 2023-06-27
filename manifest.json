@@ -8,11 +8,11 @@
     "service_worker": "background.js"
   },
   "host_permissions": [
-    "https://portal.bitfactory.nl/ticket/*"
+    "https://portal.bitfactory.nl/*"
   ],
   "content_scripts": [
     {
-      "matches": ["https://portal.bitfactory.nl/ticket/*"],
+      "matches": ["https://portal.bitfactory.nl/*"],
       "js": ["contentScript.js"]
     }
   ],
